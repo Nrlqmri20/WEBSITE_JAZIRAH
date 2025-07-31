@@ -113,7 +113,7 @@ $current_user = get_logged_in_user();
         <div class="filter-container">
             <div class="filter-header">
                 <i class="fas fa-filter"></i>
-                <h3>Filter & Pencarian Data</h3>
+                <h3>Pencarian Data</h3>
             </div>
 
             <div class="filter-grid">
@@ -135,16 +135,29 @@ $current_user = get_logged_in_user();
                     </label>
                     <select class="filter-select" id="kabupatenFilter">
                         <option value="">Semua Kabupaten</option>
-                        <option value="aceh-besar">Aceh Besar</option>
-                        <option value="aceh-barat">Aceh Barat</option>
-                        <option value="aceh-timur">Aceh Timur</option>
-                        <option value="aceh-selatan">Aceh Selatan</option>
-                        <option value="aceh-utara">Aceh Utara</option>
-                        <option value="banda-aceh">Banda Aceh</option>
-                        <option value="langsa">Langsa</option>
-                        <option value="lhokseumawe">Lhokseumawe</option>
-                        <option value="sabang">Sabang</option>
-                        <option value="subulussalam">Subulussalam</option>
+                        <option value="">Kab. Simeulue</option>
+                        <option value="">Kab. Aceh Singkil</option>
+                        <option value="">Kab. Aceh Selatan</option>
+                        <option value="">Kab. Aceh Tenggara</option>
+                        <option value="">Kab. Aceh Timur</option>
+                        <option value="">Kab. Aceh Tengah</option>
+                        <option value="">Kab. Aceh Barat</option>
+                        <option value="">Kab. Aceh besar</option>
+                        <option value="">Kab. Pidie</option>
+                        <option value="">Kab. Bireuen</option>
+                        <option value="">Kab. Aceh Utara</option>
+                        <option value="">Kab. Aceh Barat Daya</option>
+                        <option value="">Kab. Gayo Lues</option>
+                        <option value="">Kab. Aceh Tamiang</option>
+                        <option value="">Kab. Nagan Raya</option>
+                        <option value="">Kab. Aceh Jaya</option>
+                        <option value="">Kab. Bener Meriah</option>
+                        <option value="">Kab. Pidie Jaya</option>
+                        <option value="">Kota Banda Aceh</option>
+                        <option value="">Kota Sabang</option>
+                        <option value="">Kota Langsa</option>
+                        <option value="">Kota Lhokseumawe</option>
+                        <option value="">Kota Subulussalam</option>
                     </select>
                 </div>
 
@@ -156,6 +169,7 @@ $current_user = get_logged_in_user();
                     </label>
                     <select class="filter-select" id="tahunFilter">
                         <option value="">Semua Tahun</option>
+                        <option value="2024">2023</option>
                         <option value="2024">2024</option>
                         <option value="2025">2025</option>
                         <option value="2026">2026</option>
