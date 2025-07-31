@@ -1,0 +1,1074 @@
+/* ===== GLOBAL RESET & BASE STYLES ===== */
+/* Reset default margin, padding, dan box-sizing untuk semua element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styling untuk body - font, background gradient, dan warna text */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    color: #1e293b;
+    line-height: 1.6; /* Ditambahkan untuk readability */
+}
+
+/* ===== HEADER SECTION ===== */
+/* Header utama dengan gradient background dan shadow */
+header {
+    background: linear-gradient(135deg, #2c5530 0%, #537D5D 50%, #6b9b6f 100%);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 10px 25px rgba(30, 64, 175, 0.2);
+    position: sticky; /* Ditambahkan untuk sticky header */
+    top: 0;
+    z-index: 100;
+}
+
+/* Container untuk content di dalam header */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container untuk logo dan title di kiri header */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Container untuk logo dengan background semi-transparent */
+.logo-container {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Icon di dalam logo container */
+.logo-container i {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Title utama di header */
+.header-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* Subtitle di bawah title header */
+.header-subtitle {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.25rem;
+}
+
+/* Container untuk info user di kanan header */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+/* Avatar user dengan initial */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #2c5530 0%, #537D5D 50%, #6b9b6f 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+}
+
+/* Container untuk nama dan role user */
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nama user */
+.user-name {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* Role user */
+.user-role {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button logout */
+.logout-btn {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.logout-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== MAIN CONTAINER ===== */
+/* Container utama untuk semua content di bawah header */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===== STATISTICS SECTION ===== */
+/* Grid layout untuk kartu statistik */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Kartu individual untuk setiap statistik */
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Border atas berwarna pada kartu statistik */
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #2c5530 0%, #537D5D 50%, #6b9b6f 100%);
+}
+
+/* Efek hover pada kartu statistik */
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Content di dalam kartu statistik */
+.stat-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Icon di kartu statistik */
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2c5530 0%, #537D5D 50%, #6b9b6f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0; /* Ditambahkan agar icon tidak mengecil */
+}
+
+/* Container untuk info statistik */
+.stat-info {
+    flex: 1;
+}
+
+/* Angka statistik */
+.stat-number {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+/* Label statistik */
+.stat-label {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* ===== PAGE HEADER SECTION ===== */
+/* Header untuk setiap halaman/section */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Title halaman dengan icon */
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Icon di page title */
+.page-title i {
+    color: #2c5530;
+}
+
+/* Container untuk action buttons di page header */
+.page-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Ditambahkan untuk responsive */
+}
+
+/* ===== BUTTON STYLES ===== */
+/* Base button style dengan gradient background */
+.btn {
+    background: linear-gradient(135deg, #2c5530 0%, #537D5D 50%, #6b9b6f 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Ditambahkan agar text tidak wrap */
+}
+
+/* Efek hover pada button */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.3); /* Diperbaiki warna shadow */
+}
+
+/* Button secondary (abu-abu) */
+.btn-secondary {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); /* Diperbaiki menjadi gradient */
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #4b5563 0%, #374151 100%); /* Diperbaiki hover */
+    box-shadow: 0 8px 25px rgba(107, 114, 128, 0.3);
+}
+
+/* Button warning (kuning/orange) */
+.btn-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); /* Diperbaiki menjadi gradient */
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%); /* Diperbaiki hover */
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+/* Button danger (merah) */
+.btn-danger {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); /* Diperbaiki menjadi gradient */
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%); /* Diperbaiki hover */
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+}
+
+/* Button ukuran kecil */
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+
+/* ===== FILTERS SECTION ===== */
+/* Container untuk filter */
+.filters-container {
+    margin-bottom: 2rem;
+}
+
+/* Content area untuk filter controls */
+.filters-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+/* Group untuk setiap filter */
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Label untuk filter */
+.filter-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+/* Input dan select untuk filter */
+.filter-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit; /* Ditambahkan */
+}
+
+.filter-input:focus {
+    outline: none;
+    border-color: #537D5D; /* Diperbaiki warna focus */
+    box-shadow: 0 0 0 3px rgba(83, 125, 93, 0.1); /* Ditambahkan focus shadow */
+}
+
+/* ===== TABLE SECTION ===== */
+/* Container untuk tabel */
+.table-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    overflow: hidden;
+}
+
+/* Header tabel dengan gradient background */
+.table-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Diperbaiki background */
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Title di header tabel */
+.table-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b; /* Diperbaiki warna text */
+    margin: 0;
+}
+
+/* Icon di header tabel */
+.table-header i {
+    color: #537D5D; /* Diperbaiki warna icon */
+    font-size: 1.25rem;
+}
+
+/* Wrapper untuk scroll horizontal tabel */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Base table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Header tabel (thead th) */
+thead th {
+    background: #f8fafc;
+    color: #374151;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+/* Baris tabel (tbody tr) */
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+/* Efek hover pada baris tabel */
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Cell tabel (tbody td) */
+tbody td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+/* ===== BADGE STYLES ===== */
+/* Base badge styling */
+.badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block; /* Ditambahkan */
+}
+
+/* Badge primary (merah) - untuk status penting */
+.badge-primary {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: white;
+}
+
+/* Badge secondary (hijau) - untuk status success */
+.badge-secondary {
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
+}
+
+/* Badge info (biru) - untuk informasi */
+.badge-info {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+/* Badge warning (kuning) - untuk peringatan */
+.badge-warning {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+/* ===== MODAL STYLES ===== */
+/* 1. Modal overlay background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+/* 2. Modal container/content */
+.modal-content {
+    background: white;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    animation: modalSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modal visibility state */
+.modal[style*="block"] {
+    opacity: 1;
+}
+
+/* Animation untuk modal slide in */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 3. Modal header dengan gradient background */
+.modal-header {
+    background: linear-gradient(135deg, #2c5530 0%, #537D5D 50%, #6b9b6f 100%);
+    color: white;
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pattern background untuk modal header */
+.modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Content di dalam modal header */
+.modal-header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+/* Icon di modal header */
+.modal-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Title di modal header */
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* 4. Close button untuk modal */
+.close {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.75rem;
+    border-radius: 12px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Efek hover pada close button */
+.close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* 5. Modal body - area untuk form content */
+.modal-body {
+    padding: 2.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    max-height: calc(100vh - 280px);
+    scroll-behavior: smooth;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Custom scrollbar untuk modal body */
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.3);
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #537D5D 0%, #2c5530 100%);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2c5530 0%, #1e3a21 100%);
+}
+
+/* ===== FORM STYLES ===== */
+/* 6. Form group - container untuk setiap input field */
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Label untuk form input */
+.form-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Icon di dalam form label */
+.form-label i {
+    margin-right: 0.5rem;
+    color: #537D5D;
+}
+
+/* Input dan select styling */
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    font-family: inherit;
+    position: relative;
+}
+
+/* Focus state untuk form input */
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #537D5D;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(83, 125, 93, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Hover state untuk form input */
+.form-input:hover,
+.form-select:hover {
+    border-color: #6b9b6f;
+    box-shadow: 0 4px 12px rgba(83, 125, 93, 0.15);
+}
+
+/* Hint text untuk password field */
+.password-hint {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-style: italic;
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
+
+/* Decorative focus line (tidak terpakai di desain ini) */
+.form-focus-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, #2c5530, #537D5D, #6b9b6f);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    border-radius: 1px;
+}
+
+.form-input:focus + .form-focus-line,
+.form-select:focus + .form-focus-line {
+    transform: scaleX(1);
+}
+
+/* ===== MODAL FOOTER ===== */
+/* 7. Form actions - area untuk button submit/cancel */
+.form-actions {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Cancel button styling */
+.btn-cancel {
+    background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(135deg, #475569 0%, #334155 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(100, 116, 139, 0.4);
+}
+
+/* Submit button styling */
+.btn-submit {
+    background: linear-gradient(135deg, #2c5530 0%, #537D5D 50%, #6b9b6f 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: 0.5px;
+    min-width: 140px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer effect untuk submit button */
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(44, 85, 48, 0.4);
+}
+
+/* ===== NOTIFICATION STYLES ===== */
+/* Notification popup di kanan atas */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    z-index: 1001;
+    animation: slideInRight 0.3s ease;
+    max-width: 300px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Success notification (hijau) */
+.alert-success {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+/* Info notification (biru) */
+.alert-info {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* Error notification (merah) */
+.alert-error {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+/* Warning notification (kuning) */
+.alert-warning {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Animation untuk notification slide in */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* Fade in animation untuk elemen */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state */
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Display utilities */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile devices (768px ke bawah) */
+@media (max-width: 768px) {
+    /* Header responsive */
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    /* User info di mobile */
+    .user-info {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Statistics grid di mobile */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Page header di mobile */
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Page actions di mobile */
+    .page-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .page-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Filters di mobile */
+    .filters-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        min-width: auto;
+    }
+
+    /* Modal di mobile */
+    .modal {
+        padding: 1rem;
+    }
+
+    .modal-header,
+    .modal-body,
+    .form-actions {
+        padding: 1.5rem;
+    }
+    
+    /* Form actions di mobile */
+    .form-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .btn-cancel,
+    .btn-submit {
+        width: 100%;
+        min-width: auto;
+    }
+
+    /* Table responsive */
+    .table-wrapper {
+        font-size: 0.875rem;
+    }
+    
+    thead th,
+    tbody td {
+        padding: 0.75rem;
+    }
+
+    /* Container padding di mobile */
+    .container {
+        padding: 1rem;
+    }
+    
+    /* Notification di mobile */
+    .notification {
+        left: 1rem;
+        right: 1rem;
+        max-width: none;
+    }
+}
+
+/* Tablet devices (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Container padding untuk tablet */
+    .container {
+        padding: 1.5rem;
+    }
+    
+    /* Stats grid untuk tablet */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Modal untuk tablet */
+    .modal-content {
+        max-width: 600px;
+    }
+}
+
+/* Large screens (1200px ke atas) */
+@media (min-width: 1200px) {
+    /* Container lebih lebar untuk desktop besar */
+    .container {
+        max-width: 1400px;
+        padding: 2.5rem;
+    }
+    
+    .header-content {
+        max-width: 1400px;
+    }
+    
+    /* Stats grid 4 kolom untuk desktop besar */
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+/* Styling untuk print/export */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    header,
+    .page-actions,
+    .filters-container,
+    .modal {
+        display: none;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .table-container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .stat-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+/* Focus visible untuk keyboard navigation */
+.btn:focus-visible,
+.filter-input:focus-visible,
+.form-input:focus-visible,
+.form-select:focus-visible {
+    outline: 2px solid #537D5D;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .btn,
+    .stat-card,
+    .table-container {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
