@@ -157,9 +157,7 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody id="userTableBody">
-                        <!-- Table content will be populated by JavaScript -->
-                    </tbody>
+                    <tbody id="userTableBody"></tbody>
                 </table>
             </div>
         </div>

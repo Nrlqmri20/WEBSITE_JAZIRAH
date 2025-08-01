@@ -112,8 +112,7 @@ function loadUserData(userId) {
     if (user) {
         document.getElementById('userId').value = user.id;
         document.getElementById('username').value = user.username;
-        document.getElementById('namaLengkap').value = user.namaLengkap;
-        document.getElementById('email').value = user.email;
+        z
         document.getElementById('role').value = user.role;
         document.getElementById('password').value = '';
     }

@@ -446,9 +446,7 @@ document.addEventListener('keydown', function (e) {
             closeModal();
         }
     }
-});
-
-// JAVASCRIPT FUNCTIONS 
+}); 
 
 let currentFilters = {
     search: '',
@@ -628,7 +626,7 @@ document.getElementById('searchInput').addEventListener('input', function () {
     }, 300);
 });
 
-// MODIFIKASI FUNGSI YANG SUDAH ADA
+
 // Update loadDashboardData untuk menyimpan data ke allData
 const originalLoadDashboardData = loadDashboardData;
 loadDashboardData = function () {
