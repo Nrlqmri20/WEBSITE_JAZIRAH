@@ -19,12 +19,11 @@ $current_user = get_logged_in_user();
 <body>
     <header>
         <div class="header-content">
-
             <!-- KIRI: Logo + Judul (digabung) -->
             <div class="header-left">
                 <!-- Logo BPS -->
+                <img src="../../public/assets/img/LOGO BPS.png" alt="" style="width: 55px;">
                 <div class="logo-container">
-                    <img src="../../public/assets/img/LOGO BPS.png" alt="" style="width: 55px;">
                 </div>
 
                 <!-- Icon + Judul -->
@@ -220,7 +219,6 @@ $current_user = get_logged_in_user();
                     </button>
                 </div>
             </div>
-
 
             <div class="table-wrapper">
                 <table>
